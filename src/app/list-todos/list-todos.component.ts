@@ -32,7 +32,7 @@ export class ListTodosComponent implements OnInit {
   }
 
   refreshTodos() {
-    this.todoService.retrieveAllTodos('Agustin').subscribe(
+    this.todoService.retrieveAllTodos('agustin').subscribe(
       response => {
         console.log(response);
         this.todos = response;
@@ -41,7 +41,7 @@ export class ListTodosComponent implements OnInit {
   }
 
   deleteTodo(id) {
-    this.todoService.deleteTodo("Agustin", id).subscribe(
+    this.todoService.deleteTodo("agustin", id).subscribe(
       response => {
         this.refreshTodos();
         console.log(response);
@@ -50,11 +50,11 @@ export class ListTodosComponent implements OnInit {
     );
   }
 
-  updateTodo(id) { 
+  updateTodo(id) {
     this.router.navigate(['todos',id]);
   }
 
-  addTodo() { 
+  addTodo() {
     this.router.navigate(['todos',-1]);
   }
 

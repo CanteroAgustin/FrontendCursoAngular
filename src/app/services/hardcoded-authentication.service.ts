@@ -11,10 +11,10 @@ export class HardcodedAuthenticationService {
 
     let response :boolean = false;
 
-    if (userName === 'Agustin' && password === '1234') {
+    if (userName === 'agustin' && password === '1234') {
       sessionStorage.setItem('authenticatedUser', userName)
       response = true;
-    } 
+    }
     return response;
   }
 
